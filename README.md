@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# 초기 설정
+### 1.리포지토리를 에디터에 클론
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 리포지토리 주소 복사.
 
-## Available Scripts
+   <img width="480" alt="스크린샷 2023-09-06 00 20 53" src="https://github.com/ghdi6211/TimeSyncer/assets/82808175/3f06d055-cbd3-4575-b4e8-6dfcfd79e78c">
 
-In the project directory, you can run:
 
-### `yarn start`
+2. 원하는 폴더에 에디터를 열고 터미널에
+   ``` git clone  리포지토리의 주소(1.에서 복사한 내용) ```를 입력
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   위 명령어를 입력시 아래와 같은 구조를 가진다.
+   - ```
+     ├── TimeSyncer
+     │   ├── .github
+     │   ├── client
+     │   │     └── ~~~
+     │   └── server
+     │   │     └── ~~~
+     │   ├── .gitignore
+     │   ├── package
+     │   ├── README
+     │   └── yarn
+     └──
+     ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3.  패키지 의존성 설치
+   - 클라이언트와 서버 둘다 사용
+      - 자신의 디렉토리 위치 확인 mac = pwd , window = dir
+      - 프로젝트폴더/TimeSyncer 이 위치에서 ```yarn install-all``` 입력시 모든 디렉토리의 패키지가 설치된다.
+      - 패키지 설치후 ```yarn dev```를 입력시 클라이언트와 서버가 함께 돌아간다.
+      - client = localhost:3000, server localhost:3001
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - 클라이언트만 사용
+     - 프로젝트폴더/TimeSyncer/client 위치에서 ```yarn 또는 yarn install``` 패키지 설치
+     - 패키지 설치후 ```yarn start```로 클라이언트 기동
+    
+   - 서버만 사용
+     - 프로젝트폴더/TimeSyncer/server 위치에서 ```yarn 또는 yarn install``` 패키지 설치
+     - 패키지 설치후 ```node index.js```로 클라이언트 기동
