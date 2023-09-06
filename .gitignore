@@ -213,4 +213,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# venv
+venv
 # End of https://www.toptal.com/developers/gitignore/api/react,node,macos,windows
