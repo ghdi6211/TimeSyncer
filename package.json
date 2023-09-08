@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "cd server && node index.js",
+    "server": "cd server && pipenv run python server.py",
     "dev": "concurrently --kill-others-on-fail \"yarn client\" \"yarn server\"",
     "install-all": "yarn && yarn --cwd client && yarn --cwd server"
   },
