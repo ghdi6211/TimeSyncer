@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logout } from '../../app/slice';
+import { logoutUser } from '../../app/slice';
 import { RootState } from '../../app/store';
 import * as Styled from './style';
 
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         {isLoggedIn ? (
           <>
             <span>Hello, {username}!</span>
-            <Styled.AuthButton onClick={() => dispatch(logout())}>Logout</Styled.AuthButton>
+            <Styled.AuthButton onClick={() => dispatch(logoutUser())}>Logout</Styled.AuthButton>
           </>
         ) : (
           <>
