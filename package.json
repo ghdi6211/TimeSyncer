@@ -9,7 +9,7 @@
     "client": "cd client && yarn start",
     "server": "cd server && pipenv run python server.py",
     "dev": "concurrently --kill-others-on-fail \"yarn client\" \"yarn server\"",
-    "install-all": "yarn && yarn --cwd client && yarn --cwd server"
+    "install-all": "yarn && yarn --cwd client && cd server && pipenv install"
   },
   "dependencies": {
     "concurrently": "^8.2.1"

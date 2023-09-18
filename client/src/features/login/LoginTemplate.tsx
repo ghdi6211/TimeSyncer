@@ -39,7 +39,7 @@ const LoginTemplate: React.FC = () => {
         password
       };
 
-      axios.post('http://localhost:5003/user/login', body, {
+      axios.post('http://localhost:5001/user/login', body, {
         withCredentials: true,
       })
       .then((res) => {
